@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Caesar-Cypher</title>
+  </head>
+<body>
+  <div id="container">
+    <header>
+          <nav class="navbar">
+              <!--Logo -->
+              <div class="container">
+              <a href="index.html" class="logo">
+                <img src="img/logo2.png">
+              </a>
+            </div>
+          </nav>
+      </header>
+
+      <section id="home" class="clear">
+        <div id="caixa1">
+          <div id="secret-key">
+            <div id="apresentacao">
+                <h1>Crie ou decifre mensagens secretas!</h1>
+                <p>Com o Caesar-Cypher você pode encriptografar/descriptografar mensagens de uma maneira bem simples! Basta escolher um número positivo ou negativo para ser sua chave secreta e compartilhar com quem você quiser! Apenas com essa chave é possível descriptografar sua mensagem.</p>
+                
+                <div>
+                       <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar"> <button type="button" id="sobre-cypher" class="btn">Sobre o Cypher</button></a>
+                      </div>
+              </div>
+              <div id="imagem" class="img">
+                <img src="img/segredo-cypher2.png" height="500">
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div id="caixa2">
+          <div id="recebe-mensagem">
+            <h2>Crie ou decifre uma mensagem secreta!</h2>
+            <p class="paragrafo">
+              Escolha um número com até 2 dígitos positivo ou negativo para ser sua chave secreta, em seguida digite a mensagem desejada, logo após clicar em Encriptografar/Descriptografar, uma nova caixa irá aparecer com o resultado, basta copiar essa mensagem e mandar para quem quiser junto com a chave secreta.
+            </p>
+            <form> 
+              <input type="text" id="chave-secreta" class="form-control" placeholder="Digite aqui a chave">
+                <div class="caixa-form">
+                  <textarea class="mensagem" id="segredo" placeholder="Digite aqui sua mensagem"></textarea>
+                  <br>
+                  <button type="button"  onclick="encode()" class="btn">Encriptografar!</button>
+                  <button type="button" onclick="decode()" class="btn">Descriptografar!</button>
+                </div>
+            </form>
+          </div>
+          <div id="imagem-segredo" class="imagem2">
+            <img src="img/cadeado.jpg" class="img-fluid">
+          </div>
+          <div id="caixa4" class="caixa-form hide">
+            <h2>Veja o resultado aqui!</h2>
+            <p class="paragrafo">
+              Aqui é aonde você vê uma mensagem descriptografada ou criptografada.
+            </p>
+            <textarea id="resultado" class="mensagem" placeholder="Veja o resultado aqui"></textarea>
+            <br><br>
+            <a href="index.html"><button type="button" class="btn">Voltar</button></a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div id="caixa3" >
+        <p>&copy; Copyright 2019 Desenvolvido por: Renata Santos SQUAD 8</p><a href="index.html">
+                <img src="img/logo2.png" class="img">
+              </a>
+        </div>
+      </footer>
+  </div>
+  <script src="cipher.js"></script>
+  
+</body>
+</html>
