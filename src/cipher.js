@@ -9,7 +9,7 @@ function cifrarCaesar(offset, string){
   for(var i = 0; i < string.length; i++){
   caracter = string[i]
   ascii = caracter.charCodeAt()
-  caracter = String.fromCharCode(((ascii - 32 + offset) % 223) + 32)
+  caracter = String.fromCharCode(((ascii - 32 + (offset%223)+223) % 223) + 32)
   fraseNova += caracter
   }
   return fraseNova  
@@ -19,7 +19,7 @@ function decifrarCaesar(offset, string){
   for(var i = 0; i < string.length; i++){
     caracter = string[i]
     ascii = caracter.charCodeAt()
-    caracter = String.fromCharCode(((ascii - 32 + -offset) % 223) + 32)
+    caracter = String.fromCharCode(((ascii - 32 - (offset%223)+223) % 223) + 32)
     fraseNova += caracter
   }
   return fraseNova
