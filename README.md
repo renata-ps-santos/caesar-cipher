@@ -16,7 +16,7 @@ primeiros tipos de criptografias conhecidos na história. É um tipo de cifra po
 substituição, em que uma letra no texto original é substituída por outra,
 seguindo um número fixo para essa subtituição.
 
-![caeser-cipher](fluxograma-cipher.odg)
+![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
 O imperador Júlio César usou essa cifra para enviar ordens aos seus generais no
 campo de batalha. Essa é uma das técnicas mais simples e mais usadas para
