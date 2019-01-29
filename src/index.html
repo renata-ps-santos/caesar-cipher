@@ -46,7 +46,7 @@
             <p class="paragrafo">
               Escolha um número com até 2 dígitos positivo ou negativo para ser sua chave secreta, em seguida digite a mensagem desejada, logo após clicar em Encriptografar/Descriptografar, uma nova caixa irá aparecer com o resultado, basta copiar essa mensagem e mandar para quem quiser junto com a chave secreta.
             </p>
-            <form> 
+            
               <input type="number" id="chave-secreta" class="form-control" placeholder="Digite aqui a chave">
                 <div class="caixa-form">
                   <textarea class="mensagem" id="segredo" placeholder="Digite aqui sua mensagem"></textarea>
@@ -54,7 +54,7 @@
                   <button type="button"  onclick="encode()" class="btn">Encriptografar!</button>
                   <button type="button" onclick="decode()" class="btn">Descriptografar!</button>
                 </div>
-            </form>
+            
           </div>
           <div id="imagem-segredo" class="imagem2">
             <img src="img/cadeado.jpg" class="img-fluid">
@@ -80,6 +80,7 @@
       </footer>
   </div>
   <script src="cipher.js"></script>
+  <script src="tests.js"></script>
   
 </body>
 </html>

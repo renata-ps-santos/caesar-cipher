@@ -1,11 +1,12 @@
-var mensagemResult = document.getElementById("caixa4")
-var imagem = document.getElementById("imagem-segredo")
-var ascii = 0
+function mensagemResult() { return document.getElementById("caixa4") }
+function imagem() {return document.getElementById("imagem-segredo") }
+
+
+function cifrarCaesar(offset, string){
+  var ascii = 0
 var fraseNova = ''
 var caracter = ''
-  
-function cifrarCaesar(offset, string){
-  offset = parseInt(offset)
+
   for(var i = 0; i < string.length; i++){
   caracter = string[i]
   ascii = caracter.charCodeAt()
@@ -16,13 +17,15 @@ function cifrarCaesar(offset, string){
     caracter = String.fromCharCode(((ascii - 97 + (offset%26)+26) % 26) + 97)
     fraseNova += caracter
   } else{
-    fraseNova += caracter
+    fraseNova += String.fromCharCode(ascii)
   }
   }
   return fraseNova  
 }
 function decifrarCaesar(offset, string){
-  offset = parseInt(offset)
+  var ascii = 0
+var fraseNova = ''
+var caracter = ''
 
   for(var i = 0; i < string.length; i++){
     caracter = string[i]
@@ -34,15 +37,17 @@ function decifrarCaesar(offset, string){
       caracter = String.fromCharCode(((ascii - 97 - (offset%26)+26) % 26) + 97)
       fraseNova += caracter
     }else{
-      fraseNova += caracter
+      fraseNova += String.fromCharCode(ascii)
     }
     }
     return fraseNova 
 }
+
+
 function encode(){
   const offset = document.getElementById("chave-secreta").value
   const string = document.getElementById("segredo").value
-  const cifrado = cifrarCaesar(offset, string)
+  const cifrado = cifrarCaesar(Number(offset), string)
   if(offset !== '' && string !== ''){
 
   document.getElementById("resultado").innerHTML = cifrado
@@ -50,20 +55,20 @@ function encode(){
   document.getElementById("segredo").value=""
   document.getElementById("chave-secreta").value=""
   imagem.classList.add('hide')
-  mensagemResult.classList.remove('hide')
+  mensagemResult().classList.remove('hide')
 }
 }
 function decode(){
   const offset = document.getElementById("chave-secreta").value
   const string = document.getElementById("segredo").value
-  const decifrado = decifrarCaesar(offset, string)
+  const decifrado = decifrarCaesar(Number(offset), string)
   if(offset !== '' && string !== ''){
   document.getElementById("resultado").innerHTML = decifrado
   fraseNova = ''
   document.getElementById("segredo").value=""
   document.getElementById("chave-secreta").value=""
   imagem.classList.add('hide')
-  mensagemResult.classList.remove('hide')
+  mensagemResult().classList.remove('hide')
 }
 
 }
