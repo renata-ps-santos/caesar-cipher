@@ -39,8 +39,8 @@
               Apenas com essa chave é possível descriptografar sua mensagem.</p>
 
             <div id="btn-about">
-              <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" class="btn-cipher"> <button type="button" id="about-cipher"
-                  class="btn">Sobre o Cipher</button></a>
+              <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" class="btn-cipher"> <button type="button"
+                  aria-labelledby="botão sobre cipher" id="about-cipher" class="btn">Sobre o Cipher</button></a>
             </div>
           </div>
           <div id="image" class="img">
@@ -59,12 +59,14 @@
             mensagem desejada, logo após clicar em Encriptografar/Descriptografar, uma nova caixa irá aparecer com o
             resultado, basta copiar essa mensagem e mandar para quem quiser junto com a chave secreta.
           </p>
-          <label name="chave-secreta"><input type="text" id="secret-key" class="form-control" placeholder="Digite aqui a chave"></label>
+          <label name="chave-secreta"><input type="text" id="secret-key" aria-labelledby="area da chave secreta" class="form-control"
+              placeholder="Digite aqui a chave"></label>
           <div class="box-form">
-            <label name="digitar-mensagem"><textarea class="msg" id="secret" placeholder="Digite aqui sua mensagem"></textarea></label>
+            <label name="digitar-mensagem"><textarea class="msg" id="secret" aria-labelledby="area de texto"
+                placeholder="Digite aqui sua mensagem"></textarea></label>
             <br>
-            <button type="button" onclick="encode()" class="btn">Encriptografar!</button>
-            <button type="button" onclick="decode()" class="btn">Descriptografar!</button>
+            <button type="button" aria-labelledby="botão para encriptografar" onclick="encode()" class="btn">Encriptografar!</button>
+            <button type="button" aria-labelledby="botão para descriptografar" onclick="decode()" class="btn">Descriptografar!</button>
           </div>
         </div>
         <div id="image-secret" class="image2">
@@ -75,9 +77,10 @@
           <p>
             Aqui é aonde você vê uma mensagem descriptografada ou criptografada.
           </p>
-          <label name="resultado-mensagem"><textarea id="result" class="msg" placeholder="Veja o resultado aqui"></textarea></label>
+          <label name="resultado-mensagem"><textarea id="result" class="msg" aria-labelledby="area de resultado do texto"
+              placeholder="Veja o resultado aqui"></textarea></label>
           <br><br>
-          <a href="index.html"><button type="button" class="btn">Voltar</button></a>
+          <a href="index.html"><button type="button" aria-labelledby="botão para voltar ao início" class="btn">Voltar</button></a>
         </div>
       </div>
     </section>
@@ -91,7 +94,7 @@
     </footer>
   </div>
   <script src="script.js"></script>
-
+  <script src="tests.js"></script>
 </body>
 
 </html>
