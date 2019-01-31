@@ -6,49 +6,39 @@ body{
 	font-size: 1em;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     text-align: left;
-    min-width: 1280px;
     overflow-x:hidden;
+}
+h2{
+   color: #343a40;
 }
 .navbar{
 	background-color: #343a40;
-	height: 100px;
-    text-align: center;
-    
+    height: 100px;
+    text-align: center;  
 }
 .navbar img{
 	margin: 10px;
 }
-
 #home{
-	background-image: url(img/bg6.jpg);
-
+	background: #FFBF00 url(img/bg6.jpg);
 	background-size: cover;
-   /*background-image: linear-gradient(#d8c857, #e2d06e);*/
     color: #fff;
-    margin-bottom: 0;
-
 }
-
-p{
-	margin-top: 0;
-    margin-bottom: 1rem;
-
-}
-h2, .paragrafo{
-   color: #343a40;
-}
-#caixa1, #caixa2, #caixa3{
+#box1, #box2{
     display: flex;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-
+    padding:20px 0 20px 10px;
 }
-
-#secret-key{
+#box2{
+    margin-left:50px;
+}
+#box3{
+    display: flex;
+    padding-top:10px;
+}
+#main{
     width: 580px;
     height: 450px;
-    margin: 35px 0 0 20px;
+    margin-top: 35px;
     display: flex;   
     font-size: 1.1em;
 }
@@ -59,16 +49,13 @@ h1, h2{
     margin-bottom: .5rem;
     width: 570px;
 }
-
-#imagem{
-   margin-top: -50px;
-   margin-left: 80px;
-   width: 430px;
-   height: 450px;
-   float: right;
-
+#image{
+    margin-top: -30px;
+    margin-left: 80px;
+    width: 430px;
+    height: 450px;
+    float: right;
 }
-
 .form-control{
     display: flex;
     width: 350px;
@@ -83,21 +70,23 @@ h1, h2{
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-#recebe-mensagem, #imagem2, #caixa4{
+#receive-mensage, #image2, #box4{
     width: 480px;
     height: 519px;
     margin: 25px 0 0 20px;
-
 }
-.caixa-form{
+.box-form{
     width: 480px;
     margin: 35px 0 0;
-      
 }
-#caixa2{
+#box2{
     margin-bottom: 30px;
+    color: #343a40;
 }
-.mensagem{
+#box2 p{
+    padding-bottom: 20px;
+}
+.msg{
     display: block;
     width: 450px;
     height: 100px;
@@ -111,26 +100,23 @@ h1, h2{
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-#apresentacao{
+#presentation{
     margin: 20px 0 0 60px;
 }
-#sobre-cypher{
+#about-cipher{
 	margin-top: 70px;
-	margin-left: 150px;
+	margin-left: 27%;
 }
 .btn{
-  
     height: 45px;
     width: 150px;
-	color: #495057;
-    background-color: #fff;
 	border-radius: 5px;
 	border: 1px solid;
 	color: #fff;
     background-color: #17a2b8;
     border-color: #17a2b8;
     background-clip: padding-box;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 500; 
     cursor: pointer;
 }
@@ -138,24 +124,23 @@ h1, h2{
     background-color: #238A98;
 }
 .btn:focus{
-outline: thin dotted;
+    outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: 0px;
 }
-
-.imagem2{
+.image2{
     margin-top: 0; 
     margin-left: 150px;
 
 }
 .img-fluid{
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
-#caixa4{
+#box4{
     margin-left: 200px;
 }
-#resultado{
+#result{
     margin-top: 30px;
     height: 130px;
 }
@@ -174,4 +159,350 @@ footer{
     font-size: 1.1em;
     line-height: 40px;
     color: #fff;
+}
+@media only screen and (max-width: 980px) {
+    #image{
+        display:none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+    #container, #home, #box1, #main, #box2, #receive-msg, #secret-key, #box-form, #secret, #image-secret, #box4, #result, #box3, #btn-about, #image{
+        width:100%;
+        height:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    #main{
+        display: block; 
+    }
+    #main p{
+        font-size: 0.95em;
+    }
+    #presentation{
+        margin:35px 0 10px 12px;
+    }
+    .btn{
+        width:30%;
+    }
+    #receive-msg, #image2, #box4{
+        width: 90%;
+        height: 100%;
+        margin: 25px 0 0 12px;
+    }
+    #receive-msg p{
+        font-size: 0.9em;
+    }
+    #box1, #box2, #box3{
+        display: block;
+    }
+    #box2{
+        margin-left:10px;
+    }
+    h1, h2{
+        font-size: 4em;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: .5rem;
+        width: 90%;
+    }
+    #secret-key{
+        width: 90%;
+        height:40px;
+    }
+    .form-control{
+        display: block;
+        width: 30%;
+    }
+    .box-form{
+        width: 90%;
+        height:60px;    
+    }
+    #box2{
+        margin-bottom: 10px;
+    }
+    .msg{
+        display: block;
+        width: 90%;
+        height: 100px;
+    }
+    .image2{
+        margin-top: 90px; 
+        margin-left:-30px;
+    }
+    #box4{
+        margin-left: 5px;
+        margin-top: 100px;
+    }
+    #result{
+        width:90%;
+        height: 60px;
+    }
+    footer{
+        height: 100%;
+        font-size:1em;
+    }
+    footer a{
+        display:none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #container, #home, #box1, #main, #box2, #receive-msg, #secret-key, #box-form, #secret, #image-secret, #box4, #result, #box3, #btn-about{
+        width:100%;
+        height:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    #image{
+        display:none;
+    }
+    #main{
+        display: block;   
+    }
+    #presentation{
+        margin:35px 0 10px 12px;
+        font-size: 1em;
+    }
+    .btn{
+        width:30%;   
+    }
+    #receive-msg, #image2, #box4{
+        width: 90%;
+        height: 100%;
+        margin: 25px 0 0 12px;
+    }
+    #box1, #box2, #box3{
+        display: block;
+    }
+    #box2{
+        margin-left:10px;
+    }
+    h1, h2{
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: .5rem;
+        width: 90%;
+    }
+    p{
+        font-size: 1em;
+        font-weight:100;
+        width: 90%;
+    }
+    #secret-key{
+        width: 90%;
+        height:40px;
+    }
+    .form-control{
+        display: block;
+        width: 30%;
+    }
+    .box-form{
+        width: 90%;
+        height:60px;  
+    }
+    #box2{
+        margin-bottom: 10px;
+    }
+    .msg{
+        display: block;
+        width: 90%;
+        height: 100px;
+    }
+    .image2{
+        margin-top: 90px; 
+        margin-left:0;
+    }
+    #box4{
+        margin-left: 5px;
+        margin-top: 100px;
+    }
+    #result{
+        width:90%;
+        height: 60px;
+    }
+    footer{
+        height: 100%;
+        font-size:0.9em;
+    }
+    footer a{
+        display:none;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {  
+    #container, #home, #box1, #main, #box2, #receive-msg, #secret-key, #box-form, #secret, #image-secret, #box4, #result, #box3, #btn-about{
+        width:100%;
+        height:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    #image{
+        display:none;
+    }
+    #main{
+        display: block;   
+        font-size: 0.8em;
+    }
+    #presentation{
+        margin:35px 0 10px 12px;
+        font-size:1.3em;
+    }
+    .btn{
+        width:40%;   
+    }
+    .image2{
+        margin-left:-30px;
+    }
+    #receive-msg, #image2, #box4{
+        width: 90%;
+        height: 100%;
+        margin: 25px 0 0 12px;
+    }
+    #box1, #box2, #box3{
+        display: block;
+    }
+    #box2{
+        margin-left:10px;
+    }
+    h1, h2{
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: .5rem;
+        width: 90%;
+    }
+    p{
+        font-size: 1em;
+        font-weight:100;
+        width: 90%;
+    }
+    #secret-key{
+        width: 90%;
+        height:40px;
+    }
+    .form-control{
+        display: block;
+        width: 30%;
+    }
+    .box-form{
+        width: 90%;
+        height:60px;  
+    }
+    #box2{
+        margin-bottom: 10px;
+    }
+    .msg{
+        display: block;
+        width: 90%;
+        height: 100px;
+    }
+    .image2{
+        margin-top: 90px; 
+        margin-left:0;
+    }
+    #box4{
+        margin-left: 5px;
+        margin-top: 100px;
+    }
+    #result{
+        width:90%;
+        height: 60px;
+    }
+    footer{
+        height: 100%;
+        font-size:1em;
+    }
+    footer a{
+        display:none;
+    }
+}
+@media only screen and (max-width: 479px) {  
+    #container, #home, #box1, #main, #box2, #receive-msg, #secret-key, #box-form, #secret, #image-secret, #box4, #result, #box3, #btn-about{
+        width:100%;
+        height:100%;
+    }
+    .navbar{
+        width:100%;
+    }
+    #image{
+        display:none;
+    }
+    #main{
+        display: block;   
+        font-size: 0.8em;
+    }
+    #presentation{
+        margin:35px 0 10px 12px;
+        font-size:1.3em;
+    }
+    .btn{
+        width:45%;
+        font-size:75%;
+    }
+    .image2{
+        margin-left:-30px;
+    }
+    #receive-msg, #image2, #box4{
+        width: 90%;
+        height: 100%;
+        margin: 25px 0 0 12px;
+    }
+    #box1, #box2, #box3{
+        display: block;
+    }
+    #box2{
+        margin-left:10px;
+    }
+    h1, h2{
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: .5rem;
+        width: 90%;
+    }
+    p{
+        font-size: 1em;
+        font-weight:100;
+        width: 90%;
+    }
+    #secret-key{
+        width: 90%;
+        height:40px;
+    }
+    .form-control{
+        display: block;
+        width: 30%;
+    }
+    .box-form{
+        width: 90%;
+        height:60px; 
+    }
+    #box2{
+        margin-bottom: 10px;
+    }
+    .msg{
+        display: block;
+        width: 90%;
+        height: 100px;
+    }
+    .image2{
+        margin-top: 90px; 
+        margin-left:0;
+    }
+    #box4{
+        margin-left: 5px;
+        margin-top: 100px;
+    }
+    #result{
+        width:90%;
+        height: 60px;
+    }
+    footer{
+        height: 100%;
+        font-size:0.8em;
+    }
+    footer a{
+        display:none;
+    }
 }

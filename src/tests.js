@@ -1,12 +1,12 @@
 function checarCipher(calculado, esperado) {
     if (calculado === esperado) {
-      console.log("Passou!");
-      return true;
-    }else {
-      console.log("Deu Erro! " + calculado + " não é igual a " + esperado);
-      return false;
+        console.log("Passou!");
+        return true;
+    } else {
+        console.log("Deu Erro! " + calculado + " não é igual a " + esperado);
+        return false;
     }
-  }
+}
 
 //Caso 1
 checarCipher(cifrarCaesar(1, 'z'), 'a');
