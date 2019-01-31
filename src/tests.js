@@ -20,3 +20,7 @@ checarCipher(decifrarCaesar(1, 'bcdefghijklmnopqrstuvwxyza'), 'abcdefghijklmnopq
 checarCipher(cifrarCaesar(-1, 'z'), 'y');
 //Caso 6
 checarCipher(decifrarCaesar(-1, 'y'), 'z');
+//Caso 7
+checarCipher(cifrarCaesar(1, 'A'), 'B');
+//Caso 8
+checarCipher(decifrarCaesar(1, 'B'), 'A');
