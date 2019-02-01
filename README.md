@@ -17,4 +17,5 @@ Nunca foi tão fácil ter privacidade!
 
 ### Fluxograma
 ![fluxograma-cipher](https://raw.githubusercontent.com/renata-ps-santos/caesar-cipher/5494bb7ec673ac897fb256f4b41b19eecba7911e/fluxograma.png)
-
+De acordo com o Fluxograma, o programa espera dois parâmetros que será o deslocamento (offset) e a mensagem (string) e a decisão
+do usuário de criptografia ou descriptografia, após a decisão a função recebe os dados do DOM e processa, retornando o resultado da mensagem de acordo com a decisão do usuário.
