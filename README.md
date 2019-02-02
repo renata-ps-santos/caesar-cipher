@@ -1,8 +1,8 @@
 # Cifra de César
 
 ## Objetivo
-O objetivo do projeto Caesar Cipher é alcançar o maior número de público, usuários que desejam utilizar o site
-em dispositivo mobile, tablet ou desktop, site se adapta em diferentes telas, trazendo o conteúdo de forma responsiva.
+O objetivo do projeto Caesar Cipher é alcançar o maior número de pessoas, usuários que desejam utilizar o site
+em dispositivo mobile, tablet ou desktop,o site se adapta em diferentes telas, trazendo o conteúdo de forma responsiva.
 O projeto viabiliza o acesso à uma ferramenta que é capaz de criptografar e descriptografar mensagens com facilidade; Ou seja,
 qualquer pessoa poderá ultilizar sem dificuldades.
 
