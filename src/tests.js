@@ -9,18 +9,18 @@ function checarCipher(calculado, esperado) {
 }
 
 //Caso 1
-checarCipher(cifrarCaesar(1, 'z'), 'a');
+checarCipher(encodeCaesar(1, 'z'), 'a');
 //Caso 2
-checarCipher(decifrarCaesar(1, 'a'), 'z');
+checarCipher(decodeCaesar(1, 'a'), 'z');
 //Caso 3
-checarCipher(cifrarCaesar(1, 'abcdefghijklmnopqrstuvwxyz'), 'bcdefghijklmnopqrstuvwxyza');
+checarCipher(encodeCaesar(1, 'abcdefghijklmnopqrstuvwxyz'), 'bcdefghijklmnopqrstuvwxyza');
 //Caso 4
-checarCipher(decifrarCaesar(1, 'bcdefghijklmnopqrstuvwxyza'), 'abcdefghijklmnopqrstuvwxyz');
+checarCipher(decodeCaesar(1, 'bcdefghijklmnopqrstuvwxyza'), 'abcdefghijklmnopqrstuvwxyz');
 //Caso 5
-checarCipher(cifrarCaesar(-1, 'z'), 'y');
+checarCipher(encodeCaesar(-1, 'z'), 'y');
 //Caso 6
-checarCipher(decifrarCaesar(-1, 'y'), 'z');
+checarCipher(decodeCaesar(-1, 'y'), 'z');
 //Caso 7
-checarCipher(cifrarCaesar(1, 'A'), 'B');
+checarCipher(encodeCaesar(1, 'A'), 'B');
 //Caso 8
-checarCipher(decifrarCaesar(1, 'B'), 'A');
+checarCipher(decodeCaesar(1, 'B'), 'A');
