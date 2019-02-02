@@ -8,10 +8,16 @@ function encodeCaesar(offset, string) {
   for (let i = 0; i < string.length; i++) {
     character = string[i]
     ascii = character.charCodeAt()
-    character = String.fromCharCode(((ascii - 32 + (offset % 223) + 223) % 223) + 32)
-    newString += character
-  }
-  return newString
+    if(ascii >= 65 && ascii <= 90){
+      character = String.fromCharCode(((ascii - 65 + (offset%26)+26) % 26) + 65)
+      newString += character
+    }else if(ascii >= 97 && ascii <= 122){
+      character = String.fromCharCode(((ascii - 97 + (offset%26)+26) % 26) + 97)
+      newString += character
+    }else{
+      newString += String.fromCharCode(ascii)
+    }
+  }return newString
 }
 function decodeCaesar(offset, string) {
   let ascii = 0
@@ -20,10 +26,16 @@ function decodeCaesar(offset, string) {
   for (let i = 0; i < string.length; i++) {
     character = string[i]
     ascii = character.charCodeAt()
-    character = String.fromCharCode(((ascii - 32 - (offset % 223) + 223) % 223) + 32)
-    newString += character
-  }
-  return newString
+    if(ascii >= 65 && ascii <= 90){
+      character = String.fromCharCode(((ascii - 65 - (offset%26)+26) % 26) + 65)
+      newString += character
+    }else if(ascii >= 97 && ascii <= 122){
+      character = String.fromCharCode(((ascii - 97 - (offset%26)+26) % 26) + 97)
+      newString += character
+    }else{
+      newString += String.fromCharCode(ascii)
+    }
+  }return newString
 }
 function encode() {
   const offset = document.getElementById("secret-key").value
